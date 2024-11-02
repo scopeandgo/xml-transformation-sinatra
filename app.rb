@@ -20,6 +20,10 @@ class App < Sinatra::Base
     headers["Access-Control-Allow-Headers"] = "Content-Type"
   end
 
+  get "/" do
+    "OK"
+  end
+
   # Handle CORS preflight requests
   options "/transform" do
     200

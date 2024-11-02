@@ -6,6 +6,7 @@ gem "puma"
 gem "rack"
 gem "rackup"
 gem "sinatra-contrib"
+gem "logger"
 
 group :development do
   gem "standard"
