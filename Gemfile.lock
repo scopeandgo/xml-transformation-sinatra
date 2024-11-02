@@ -100,7 +100,7 @@ DEPENDENCIES
   puma
   rack
   rackup
-  sinatra
+  sinatra (~> 4.0)
   sinatra-contrib
   standard
 
