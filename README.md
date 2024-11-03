@@ -20,3 +20,15 @@ curl -X POST http://localhost:3000/transform \
   -F "xml=@sample/user-scopes.xml" \
   -F "xslt=@sample/user-scopes.xslt"
 ```
+
+```plain
+curl -X POST http://localhost:3000/transform \
+  -F "xml=@sample/user-problems-and-solutions.xml" \
+  -F "xslt=@sample/user-problems.xslt"
+```
+
+```plain
+curl -X POST http://localhost:3000/transform \
+  -F "xml=@sample/user-problems-and-solutions.xml" \
+  -F "xslt=@sample/user-solutions.xslt"
+```
