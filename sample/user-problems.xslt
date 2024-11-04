@@ -14,13 +14,13 @@
 
     <!-- Template for user -->
     <xsl:template match="user">
-        <h4><xsl:value-of select="."/> problems</h4>
+        <h2 style="padding-top: 1rem; padding-bottom: 1rem; page-break-after: avoid; text-align:left;"><span style="font-family: 'Lexend'; font-size: 1.5rem; font-weight: 400;"><xsl:value-of select="."/> problems</span></h2>
         <xsl:apply-templates select="following-sibling::problem[1]"/>
     </xsl:template>
 
     <!-- Template for problem -->
     <xsl:template match="problem">
-        <p><xsl:value-of select="."/></p>
+        <p style="font-family: 'Lexend'; line-height:1.15; page-break-after: avoid;"><xsl:value-of select="."/></p>
     </xsl:template>
 
 </xsl:stylesheet>

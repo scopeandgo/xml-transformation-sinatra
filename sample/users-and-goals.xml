@@ -1,0 +1,30 @@
+<users_and_goals>
+<thinking>Looking at this automated salon booking system, I can identify several distinct user types who will interact with the system in different ways. The system bridges customer communication and staff management, with some technical oversight needed.</thinking>
+
+<user>
+<name>SalonCustomer</name>
+<primary_goal>Easily book, modify, or cancel hair appointments through phone or text messaging without requiring direct human interaction</primary_goal>
+</user>
+
+<user>
+<name>Hairdresser</name>
+<primary_goal>View and manage their daily, weekly, and monthly appointment schedule through the web dashboard</primary_goal>
+</user>
+
+<user>
+<name>SalonManager</name>
+<primary_goal>Oversee the booking system, manage scheduling rules, and ensure proper operation of the automated communication system</primary_goal>
+</user>
+
+<user>
+<name>SystemAdministrator</name>
+<primary_goal>Maintain the technical infrastructure, manage Twilio integration, and ensure system security and stability</primary_goal>
+</user>
+
+<user>
+<name>BackupReceptionist</name>
+<primary_goal>Handle exceptional cases that the automated system cannot process and manage emergency schedule changes</primary_goal>
+</user>
+
+<final_thoughts>These roles cover the complete spectrum of system interaction needed for the automated booking system. SalonCustomer represents the end-users who will interact through phone/SMS, while Hairdresser and SalonManager represent the business operations side. The SystemAdministrator is crucial for technical maintenance, and I've included BackupReceptionist because even automated systems need human backup for complex cases. I've excluded roles related to payment processing, inventory, and marketing as these are explicitly out of scope.</final_thoughts>
+</users_and_goals>

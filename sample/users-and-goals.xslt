@@ -6,7 +6,7 @@
 <xsl:template match="thinking|final_thoughts"/>
 
 <!-- Main template -->
-<xsl:template match="/root">
+<xsl:template match="/users_and_goals">
     <ul>
         <xsl:apply-templates select="user"/>
     </ul>

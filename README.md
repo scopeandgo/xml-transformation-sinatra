@@ -11,8 +11,8 @@ And to transform some XML into HTML, pass `xml` and `xslt` parameters as either 
 
 ```plain
 curl -X POST http://localhost:3000/transform \
-  -F "xml=@sample/user-roles.xml" \
-  -F "xslt=@sample/user-roles.xslt"
+  -F "xml=@sample/users-and-goals.xml" \
+  -F "xslt=@sample/users-and-goals.xslt"
 ```
 
 ```plain

@@ -1,47 +1,71 @@
-<root>
-<thinking>
-I'll analyze each user role and define clear boundaries for their permissions and limitations. Given this is a solo consultant tool, the permissions need to be practical while maintaining system integrity. I'll focus on essential functionalities that align with the minimal viable product approach while ensuring proper system usage and content quality.
-</thinking>
+<user_scopes>
+<thinking>I'm analyzing the requirements for a comprehensive salon booking system with multiple user types. I need to ensure appropriate access levels and capabilities for each user while maintaining system security and operational efficiency.</thinking>
 
 <user>
-<name>ContentCreator</name>
-<must>must be able to input topic ideas or keywords for post generation</must>
-<must>must be able to generate new posts from the web interface</must>
-<must>must be able to copy generated content to clipboard</must>
-<must>must be able to regenerate content if not satisfied with results</must>
-<must>must be able to specify post length or format preferences</must>
-<mustnot>must not be able to modify the generation algorithm</mustnot>
-<mustnot>must not be able to access system configuration settings</mustnot>
-<mustnot>must not be able to access other users' generated content (if system expands)</mustnot>
+<name>SalonCustomer</name>
+<must>must be able to book new appointments via phone or SMS</must>
+<must>must be able to cancel their own appointments</must>
+<must>must be able to modify their existing appointments</must>
+<must>must be able to receive automated booking confirmations</must>
+<must>must be able to inquire about service prices</must>
+<must>must be able to receive reminder notifications</must>
+<mustnot>must not be able to access other customers' booking information</mustnot>
+<mustnot>must not be able to book outside of business hours</mustnot>
+<mustnot>must not be able to modify appointments with insufficient notice</mustnot>
+<mustnot>must not be able to book conflicting appointments</mustnot>
+</user>
+
+<user>
+<name>Hairdresser</name>
+<must>must be able to view their own daily/weekly/monthly schedule</must>
+<must>must be able to log into the web dashboard</must>
+<must>must be able to mark appointments as completed</must>
+<must>must be able to see customer contact information</must>
+<must>must be able to block out personal time slots</must>
+<mustnot>must not be able to modify system-wide settings</mustnot>
+<mustnot>must not be able to view other hairdressers' detailed schedules</mustnot>
+<mustnot>must not be able to modify booking rules</mustnot>
+</user>
+
+<user>
+<name>SalonManager</name>
+<must>must be able to manage all hairdressers' schedules</must>
+<must>must be able to set booking rules and restrictions</must>
+<must>must be able to override automated booking decisions</must>
+<must>must be able to view system analytics and reports</must>
+<must>must be able to manage service prices and availability</must>
+<mustnot>must not be able to access system administration functions</mustnot>
+<mustnot>must not be able to modify technical integrations</mustnot>
 </user>
 
 <user>
 <name>SystemAdministrator</name>
-<must>must be able to access and modify system configuration settings</must>
-<must>must be able to monitor system performance and errors</must>
-<must>must be able to restart the generation service if needed</must>
-<must>must be able to update content generation parameters</must>
-<mustnot>must not be able to access generated content without proper authorization</mustnot>
-<mustnot>must not be able to modify individual generated posts</mustnot>
+<must>must be able to manage Twilio integration settings</must>
+<must>must be able to monitor system performance</must>
+<must>must be able to manage user accounts and permissions</must>
+<must>must be able to perform system maintenance</must>
+<must>must be able to access error logs and debugging tools</must>
+<mustnot>must not be able to modify business rules without manager approval</mustnot>
+<mustnot>must not be able to book or modify appointments directly</mustnot>
 </user>
 
 <user>
-<name>ContentReviewer</name>
-<must>must be able to view generated content before publication</must>
-<must>must be able to approve or reject generated content</must>
-<must>must be able to add notes or feedback for revision</must>
-<must>must be able to track approved vs rejected content</must>
+<name>BackupReceptionist</name>
+<must>must be able to view all upcoming appointments</must>
+<must>must be able to handle exceptional booking cases</must>
+<must>must be able to modify appointments in emergency situations</must>
+<must>must be able to override automated responses when necessary</must>
 <mustnot>must not be able to modify system settings</mustnot>
-<mustnot>must not be able to generate new content directly</mustnot>
-<mustnot>must not be able to bypass the review process</mustnot>
+<mustnot>must not be able to change booking rules</mustnot>
+<mustnot>must not be able to access administrative functions</mustnot>
 </user>
 
-<final_thoughts>
-These scope definitions are appropriate because they:
-1. Maintain clear separation of concerns between content creation, system administration, and content review
-2. Protect system integrity while enabling necessary functionality
-3. Support the solo consultant use case while allowing for potential future expansion
-4. Focus on the core functionality of content generation and quality control
-5. Align with the minimal viable product approach while ensuring proper system usage
-</final_thoughts>
-</root>
+<final_thoughts>These scope definitions are appropriate because they:
+1. Maintain clear separation of responsibilities between user roles
+2. Ensure proper system security through role-based access control
+3. Enable necessary functionality while preventing unauthorized access
+4. Support the core booking and management requirements
+5. Allow for emergency override capabilities where needed
+6. Protect sensitive customer and business data
+7. Align with the project's technical and business requirements</final_thoughts>
+</user_scopes>
