@@ -12,9 +12,9 @@
 
 <!-- Template for each user section -->
 <xsl:template match="user">
-    <h3><xsl:value-of select="name"/></h3>
+    <h2 style="page-break-after: avoid; break-after: avoid;"><span style="font-family: 'Lexend'; font-weight: 700;"><xsl:value-of select="name"/> Scope</span></h2>
 
-    <h4>Must</h4>
+    <h3 style="page-break-after: avoid; break-after: avoid;"><span style="font-family: 'Lexend'; font-weight: 700;">Musts</span></h3>
     <ul class="must-list">
         <xsl:for-each select="must">
             <li>
@@ -23,7 +23,7 @@
         </xsl:for-each>
     </ul>
 
-    <h4>Must Not</h4>
+    <h3 style="page-break-after: avoid; break-after: avoid;"><span style="font-family: 'Lexend'; font-weight: 700;">Must Nots</span></h3>
     <ul class="mustnot-list">
         <xsl:for-each select="mustnot">
             <li>
